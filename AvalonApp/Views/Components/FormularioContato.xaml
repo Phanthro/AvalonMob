@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.Components.FormularioContato"
+             xmlns:customControls ="clr-namespace:AvalonApp.CustomControls">
+    <ContentView.Resources>
+        <Style TargetType="HorizontalStackLayout">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Spacing" Value="60" />
+            <Setter Property="HeightRequest" Value="150" />
+        </Style>
+        <Style TargetType="Label" x:Key="svcText">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextTransform" Value="Uppercase" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="LineBreakMode" Value="WordWrap" />
+            <Setter Property="FontFamily" Value="OutfitRegular" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+
+        </Style>
+        <Style TargetType="StackLayout">
+            <Setter Property="WidthRequest" Value="115" />
+        </Style>
+
+    </ContentView.Resources>
+    <VerticalStackLayout  HorizontalOptions="Fill" Margin="0,20,0,0">
+        <VerticalStackLayout 
+            HorizontalOptions="Fill" 
+            HeightRequest="80"
+            >
+            <Label 
+                FontSize="32"
+                FontFamily="OutfitBold"
+                TextTransform="Uppercase"
+                HorizontalOptions="Center"
+                TextColor="#3E4095"
+                HeightRequest="50"
+                >Contato</Label>
+
+            <Image Source="detalhe.png" HeightRequest="31" WidthRequest="158" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Padding="30,30,30,10" Spacing="12">
+            <customControls:StandardEntry Placeholder="Nome" BorderThickness="0" BorderColor="black" BackgroundColor="#EDEDED" CustomHeight="30" PlaceholderColor="black"></customControls:StandardEntry>
+            <customControls:StandardEntry Placeholder="Sobrenome" BorderThickness="0" BorderColor="black" BackgroundColor="#EDEDED" CustomHeight="30" PlaceholderColor="black"></customControls:StandardEntry>
+            <customControls:StandardEntry Placeholder="Email" BorderThickness="0" BorderColor="black" BackgroundColor="#EDEDED" CustomHeight="30" PlaceholderColor="black"></customControls:StandardEntry>
+            <customControls:StandardEntry Placeholder="Telefone" BorderThickness="0" BorderColor="black" BackgroundColor="#EDEDED" CustomHeight="30" PlaceholderColor="black"></customControls:StandardEntry>
+            <Picker x:Name="picker"
+                TitleColor="Black"
+                Title="Selecione um assunto"
+                BackgroundColor="#EDEDED">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Parceria</x:String>
+                        <x:String>Reclamação</x:String>
+                        <x:String>Sugestão</x:String>
+                        <x:String>Outros</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Editor Placeholder="Descreva o motivo de seu contato" PlaceholderColor="Black" HeightRequest="150" BackgroundColor="#EDEDED"></Editor>
+
+            <Button Text="Enviar"
+            FontSize="16"
+            FontFamily="OutfitBold"
+            TextTransform="Uppercase"
+            WidthRequest="178"
+            HeightRequest="51"
+            Margin="15"
+            CornerRadius="3"
+            >
+                <Button.Shadow>
+                    <Shadow Brush="Black"
+                    Offset="0,5"
+                    Radius="10"
+                    Opacity="0.5" />
+                </Button.Shadow>
+            </Button>
+
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentView>

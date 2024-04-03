@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.LoginPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            VerticalOptions="Center">
+            <Image Source="logo_oficial_01.png" WidthRequest="200" />
+
+            <VerticalStackLayout
+                WidthRequest="230"
+                VerticalOptions="Center"
+                >
+                <HorizontalStackLayout Spacing="5">
+                    <Image Source="icon_user.png" WidthRequest="20"/>
+                    <Entry 
+                        WidthRequest="200"
+                        Placeholder="Usuario"
+                        PlaceholderColor="Black"
+                        Text="{Binding Usuario}"
+                                                />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout Spacing="5">
+                    <Image Source="icon_lock.png" WidthRequest="20"/>
+
+                    <Entry
+                        IsPassword="True"
+                        WidthRequest="200"
+                        Placeholder="Senha"
+                        PlaceholderColor="Black"
+                        Text="{Binding Password}"
+                        />
+                    
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <Button
+                x:Name="CounterBtn"
+                Text="ENTRAR"
+                SemanticProperties.Hint="Login into the system"
+                Command="{Binding Logar}"
+                HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

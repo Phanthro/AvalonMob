@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.Components.InfoContato">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <HorizontalStackLayout Margin="5">
+            <Image Source="pin.png" HeightRequest="35" Margin="6" />
+            <VerticalStackLayout>
+                <Label Text="Rua São Paulo, 21 - Cerâmica" VerticalOptions="Center" FontSize="14" />
+                <Label Text="São Caetano do Sul - SP" VerticalOptions="Center" FontSize="14" />
+                <Label Text="09530-210" VerticalOptions="Center" FontSize="14" />
+            </VerticalStackLayout>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="5">
+            <Image Source="phone.png"  HeightRequest="30" Margin="5" />
+            <Label Text="(XX) 00000-0000" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="5">
+            <Image Source="email.png"  HeightRequest="30" Margin="5" />
+            <Label Text="contato@postoavalon.com.br" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentView>

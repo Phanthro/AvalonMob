@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.Unidades"
+             Title="Unidades"
+             Padding="10"
+             IconImageSource="localpin.png">
+        <VerticalStackLayout Spacing="20" Padding="10">
+            <VerticalStackLayout>
+                <Label
+                FontFamily="InterExtraBold"
+                FontSize="14"
+                TextColor="#3E4095"
+                TextTransform="Uppercase"
+                >Unidade Mauá</Label>
+                <Label>Rua xxxxxxxxxxxxx, 00 - xxxxxxxxxxxxxx Mauá - SP 09530-210</Label>
+                <Image Source="posto_2.png" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFill"/>
+            </VerticalStackLayout>
+            <VerticalStackLayout>
+                <Label
+                    FontFamily="InterExtraBold"
+                    FontSize="14"
+                    TextColor="#3E4095"
+                    TextTransform="Uppercase"
+                    >Unidade São Caetano</Label>
+                <Label>Rua São Paulo, 21 - Cerâmica São Caetano do Sul - SP 09530-210</Label>
+                <Image Source="posto_1.png" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFill"/>
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+</ContentPage>

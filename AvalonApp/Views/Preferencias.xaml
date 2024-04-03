@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.Preferencias"
+             Title="Preferencias">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Preferências" TextColor="{StaticResource Primary}" FontFamily="OutfitBold" TextTransform="Uppercase" />
+        <Grid Margin="10,35,10,20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.6*" />
+                <ColumnDefinition Width="0.4*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Text="Não mostrar ofertas:"
+                   VerticalOptions="Center"
+                   FontSize="18"/>
+            <Switch x:Name="styleSwitch"
+                    Grid.Column="1"
+                    VerticalOptions="Center"
+                    IsToggled="{Binding Popup}"
+                    />
+        </Grid>
+
+
+    </VerticalStackLayout>
+</ContentPage>

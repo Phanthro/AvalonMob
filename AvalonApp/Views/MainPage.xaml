@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.MainPage"
+             xmlns:components="clr-namespace:AvalonApp.Views.Components"
+             >
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <!--<components:CarrosselView Itens="{Binding ItensCarrossel}" Titulo="{Binding Nome}" />-->
+
+            <components:PriceCard />
+            
+            <components:ProgramaFidelidade />
+
+            <components:Siganos />
+
+        </VerticalStackLayout>
+    </ScrollView>
+    <NavigationPage.TitleView>
+        <HorizontalStackLayout Padding="5" Spacing="10">
+            <!--<Entry Placeholder="pesquissa" WidthRequest="180" />-->
+            <Border Stroke="{DynamicResource Primary}"
+                     StrokeThickness="1"
+                     StrokeShape="RoundRectangle 5,5,5,5"
+                     WidthRequest="180"
+                     Padding="2,8"
+                     HorizontalOptions="Center">    
+
+                <SearchBar></SearchBar>
+
+            </Border>
+            <Image Source="logo_avalon_1.png" HorizontalOptions="End"/>
+        </HorizontalStackLayout>
+    </NavigationPage.TitleView>
+
+</ContentPage>

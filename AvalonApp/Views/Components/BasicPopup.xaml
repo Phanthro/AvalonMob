@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="clr-namespace:CommunityToolkit.Maui.Views;assembly=CommunityToolkit.Maui"
+               x:Class="AvalonApp.Views.Components.BasicPopup"
+               CanBeDismissedByTappingOutsideOfPopup="True"
+               xmlns:components="clr-namespace:AvalonApp.Views.Components"
+               
+               >
+
+    <VerticalStackLayout HeightRequest="400" WidthRequest="300" BackgroundColor="AliceBlue" Padding="10">
+        <VerticalStackLayout.Shadow>
+            <Shadow Brush="Black"
+                Offset="0,5"
+                Radius="10"
+                Opacity="0.5" />
+        </VerticalStackLayout.Shadow>
+        <components:CarrosselView Itens="{Binding ItensCarrossel}" Titulo="{Binding Nome}" />
+        <Button Text="Fechar"
+                FontSize="10"
+                FontFamily="OutfitBold"
+                TextTransform="Uppercase"
+                WidthRequest="100"
+                HeightRequest="30"
+                Margin="15,15,15,0"
+                CornerRadius="3"
+                Clicked="OnOKButtonClicked"
+                >
+            <Button.Shadow>
+                <Shadow Brush="Black"
+                Offset="0,5"
+                Radius="10"
+                Opacity="0.5" />    
+            </Button.Shadow>
+        </Button>
+        <HorizontalStackLayout >
+            <CheckBox VerticalOptions="Center" CheckedChanged="OnCheckBoxCheckedChanged"/>
+            <Label VerticalOptions="Center">Não mostrar novamente.</Label>
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+
+</toolkit:Popup>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AvalonApp.Views.NossosServicos"
+             Title="NossosServicos"
+             >
+    <ContentPage.Resources>
+        <Style TargetType="HorizontalStackLayout">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Spacing" Value="60" />
+            <Setter Property="HeightRequest" Value="150" />
+        </Style>
+        <Style TargetType="Label" x:Key="svcText">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextTransform" Value="Uppercase" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+            <Setter Property="LineBreakMode" Value="WordWrap" />
+            <Setter Property="FontFamily" Value="OutfitRegular" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+
+        </Style>
+        <Style TargetType="StackLayout">
+            <Setter Property="WidthRequest" Value="115" />
+        </Style>
+    </ContentPage.Resources>
+    <VerticalStackLayout BackgroundColor="#3E4095" HorizontalOptions="Fill" >
+        <VerticalStackLayout 
+            HorizontalOptions="Fill" 
+            HeightRequest="160" 
+            BackgroundColor="White"
+            Padding="20"
+            >
+            <Label 
+                FontSize="32"
+                FontFamily="Outfitregular"
+                TextTransform="Uppercase"
+                HorizontalOptions="Center"
+                TextColor="#3E4095"
+                >
+                Nossos</Label>
+            <Label
+                FontSize="32"
+                FontFamily="OutfitBold"
+                HorizontalOptions="Center"
+                TextTransform="Uppercase"
+                >
+                Serviços</Label>
+            <Image Source="detalhe.png" HeightRequest="31" WidthRequest="158" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Padding="40" Spacing="25">
+            <HorizontalStackLayout>
+                <StackLayout>
+                    <Image Source="oleo.png" HeightRequest="90" WidthRequest="88" />
+                    <Label Style="{StaticResource svcText}">Abastecimento</Label>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="posto.png" HeightRequest="90" WidthRequest="88" />
+                    <Label Style="{StaticResource svcText}">Troca de Óleo</Label>
+                </StackLayout>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <StackLayout>
+                    <Image Source="cesta.png" HeightRequest="90" WidthRequest="88" />
+                    <Label Style="{StaticResource svcText}">Loja de</Label>
+                    <Label Style="{StaticResource svcText}" Margin="0">Conveniência</Label>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="lavarapido.png" HeightRequest="90" WidthRequest="88" />
+                    <Label Style="{StaticResource svcText}">Lava Rápido</Label>
+                </StackLayout>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <StackLayout>
+                    <Image Source="calibragem.png" HeightRequest="90" WidthRequest="88" />
+                    <Label Style="{StaticResource svcText}">Abastecimento</Label>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="caixa24.png" HeightRequest="90" WidthRequest="88" />
+                    <Label Style="{StaticResource svcText}">Caixa 24h</Label>
+                </StackLayout>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
